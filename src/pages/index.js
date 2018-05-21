@@ -3,7 +3,7 @@ import axios from 'axios';
 import Helmet from 'react-helmet';
 import WindConditions from "./../components/WindConditions";
 import WindCompass from './../components/WindCompass';
-import Opinion from "./../components/Opinion";
+import Opinion from "./../components/opinion";
 
 class WeatherPage extends Component {
 
