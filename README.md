@@ -1,2 +1,4 @@
-# should-i-kite-today
-http://shouldikitepoolebay.today
+# Should I kite
+```sh
+npm run develop
+```

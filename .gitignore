@@ -1,0 +1,17 @@
+# dependencies
+node_modules
+
+# production
+public
+
+# misc
+.DS_Store
+.cache
+.env
+npm-debug.log
+*.log
+package-lock.json
+
+
+#IDE
+.vscode/launch.json
