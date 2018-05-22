@@ -1,0 +1,32 @@
+.compass-container {
+  overflow: hidden;
+  width:100vw;
+  height: 100vh;
+  padding-bottom:0;
+  position: relative;
+}
+
+.compass-arrow {
+  width: 70px;
+  height: 200vh;
+  position: absolute;
+  left: 50%;
+  top: -50vh; 
+  background-color: rgba(98, 98, 224, 0.199);
+  background-image: linear-gradient(transparent 75%, rgba(255,255,255,.5) 75%);
+  background-size: 25px 25px;
+  transition: transform 1s ease;
+  margin-left: -35px;
+  box-shadow: inset 0 -20px black;  
+  animation: lines 30s infinite linear;
+  pointer-events: none;
+}
+
+@keyframes lines {
+  0% {
+    background-position:0 0%
+  }
+  100% {
+    background-position:0 50%
+  }
+}

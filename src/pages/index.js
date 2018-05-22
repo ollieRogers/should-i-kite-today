@@ -3,6 +3,7 @@ import axios from 'axios';
 import Helmet from 'react-helmet';
 import WindConditions from "./../components/WindConditions";
 import WindCompass from './../components/WindCompass';
+import ConditionsWrapper from "./../components/ConditionsWrapper";
 import Opinion from "./../components/opinion";
 
 class WeatherPage extends Component {
@@ -48,34 +49,31 @@ class WeatherPage extends Component {
     }
 
     return (
-      <div>
+      <div className="app">
         {windData &&
           <div>
-          <Helmet
-            title={`👍 ${windData.max_avg_speed.kn} knots ${windData.avg_direction.cardinal}`}
-          />
-            <WindConditions 
-              cardinal={windData.avg_direction.cardinal}
-              maxSpeed={windData.avg_speed.kn}
-              avgSpeed={windData.gust_speed.kn}
+            <Helmet
+              title={`👍 ${windData.max_avg_speed.kn} knots ${windData.avg_direction.cardinal}`}
             />
-            <Opinion
+            <ConditionsWrapper>
+              <Opinion
+                bearing={windData.avg_direction.degrees}
+                maxSpeed={windData.avg_speed.kn}
+                avgSpeed={windData.gust_speed.kn}
+              />
+              <WindConditions 
+                cardinal={windData.avg_direction.cardinal}
+                maxSpeed={windData.avg_speed.kn}
+                avgSpeed={windData.gust_speed.kn}
+              />
+            </ConditionsWrapper>
+            <WindCompass
               bearing={windData.avg_direction.degrees}
-              maxSpeed={windData.avg_speed.kn}
-              avgSpeed={windData.gust_speed.kn}
+              googleMapURL="http://maps.google.com/maps/api/js?key=AIzaSyDOxa8-lFMbda75ruLL45CqSLIqevsxDiU"
+              containerElement={<div className='compass-container'/>}
+              loadingElement={<div style={{ height: `100%` }} />}
+              mapElement={<div style={{ height: `100%` }} />}
             />
-          <WindCompass
-            bearing={windData.avg_direction.degrees}
-            googleMapURL="http://maps.google.com/maps/api/js?sensor=false"
-            containerElement={<div style={{
-            width:'100%',
-            height:'900px',
-            paddingBottom:'0',   
-            position: 'relative'
-            }} />}
-            loadingElement={<div style={{ height: `100%` }} />}
-            mapElement={<div style={{ height: `100%` }} />}
-          />
           </div>
         }
       </div>
