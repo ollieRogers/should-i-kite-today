@@ -43,23 +43,26 @@ class WeatherPage extends Component {
   }
 
   render() {
-    let windData;
+    let windData, isGood, emoji;
+
     if (this.state.hasResponse) {
       windData = this.state.weatherData.everything.weather.wind;
+      
+      isGood = windData.avg_speed.kn > 16 ? `It's good` : `It isn't great`;
+      emoji = windData.avg_speed.kn > 16 ? '😃' : '😞';
     }
+    
 
     return (
       <div className="app">
         {windData &&
           <div>
             <Helmet
-              title={`👍 ${windData.max_avg_speed.kn} knots ${windData.avg_direction.cardinal}`}
+            title={ `${emoji} ${windData.max_avg_speed.kn} knots ${windData.avg_direction.cardinal}`}
             />
             <ConditionsWrapper>
               <Opinion
-                bearing={windData.avg_direction.degrees}
-                maxSpeed={windData.avg_speed.kn}
-                avgSpeed={windData.gust_speed.kn}
+              content={`${isGood} ${emoji}`}
               />
               <WindConditions 
                 cardinal={windData.avg_direction.cardinal}
