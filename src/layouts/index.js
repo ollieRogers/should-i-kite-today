@@ -9,7 +9,7 @@ const Layout = ({ children, data }) => (
     <Helmet
       title="Should I kite Poole Bay today?"
       meta={[
-        { name: 'description', content: 'An opinionated view of if I should go kite surfing today' },
+        { name: 'description', content: 'An opinionated view on if you should go kitesurfing in Poole Bay today' },
       ]}
     />
     <div>

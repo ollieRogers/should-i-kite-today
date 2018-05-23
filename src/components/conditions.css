@@ -30,7 +30,7 @@
   position: absolute;
   left: 50%;
   top: -50vh; 
-  background-color: rgba(98, 98, 224, 0.199);
+  background-color: rgba(98, 98, 224, 0.2);
   background-image: linear-gradient(transparent 75%, rgba(255,255,255,.5) 75%);
   background-size: 25px 25px;
   transition: transform 1s ease;

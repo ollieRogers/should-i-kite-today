@@ -18,19 +18,6 @@ const WindCompass = withScriptjs(
       </GoogleMap>
   ))
 );
-// const WindCompass = ({ bearing }) => (
-//         <div style={{
-//             width:'100%',
-//             height:'0',
-//             paddingBottom:'100%',   
-//             backgroundColor: 'grey',
-//             position: 'relative'
-//             }}>
-//             </GoogleMap>
-//             
-//             {bearing}
-//         </div>
-//     )
 
 export default WindCompass;
 

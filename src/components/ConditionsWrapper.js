@@ -7,5 +7,4 @@ const ConditionsWrapper = ({ children }) => (
     </div>
 )
 
-
 export default ConditionsWrapper;
