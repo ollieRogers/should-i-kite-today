@@ -58,7 +58,7 @@ class WeatherPage extends Component {
         {windData &&
           <div>
             <Helmet
-            title={ `${emoji} ${windData.max_avg_speed.kn} knots ${windData.avg_direction.cardinal}`}
+            title={`${emoji} ${windData.avg_speed.kn} knots ${windData.avg_direction.cardinal}`}
             />
             <ConditionsWrapper>
               <Opinion
