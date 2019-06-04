@@ -19,7 +19,7 @@ const App = () => {
       const currentConditions = {
         cardinal: windData.avg_direction.cardinal,
         bearing: windData.avg_direction.degrees,
-        maxSpeed: windData.gust_speed.kn,
+        maxSpeed: windData.max_avg_speed.kn,
         avgSpeed: windData.avg_speed.kn,
         opinion: windData.avg_speed.kn > 16 ? `It's good 😀` : `It isn't great 😞`
       }
