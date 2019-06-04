@@ -9,17 +9,18 @@ const App = () => {
 
   useEffect(() => {
     async function fetchData() {
+      // TODO move to lambda.
       const result = await axios(
         "https://www.pooleyc.co.uk/wdlive/src/everything.php"
-      )
+      ) 
 
       const windData = result.data.everything.weather.wind
 
       const currentConditions = {
         cardinal: windData.avg_direction.cardinal,
         bearing: windData.avg_direction.degrees,
-        maxSpeed: windData.avg_speed.kn,
-        avgSpeed: windData.gust_speed.kn,
+        maxSpeed: windData.gust_speed.kn,
+        avgSpeed: windData.avg_speed.kn,
         opinion: windData.avg_speed.kn > 16 ? `It's good 😀` : `It isn't great 😞`
       }
 
