@@ -622,3 +622,74 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+
+
+
+
+
+
+.conditions {
+  position: absolute;
+  z-index: 99;
+  background: white;
+  padding: 2rem;
+  top: 1rem;
+  left: 1rem;
+  box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+  border-radius:4px;
+  border:1px solid #adadad;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.conditions-opinion {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.compass-container {
+  overflow: hidden;
+  width:100vw;
+  height: 100vh;
+  padding-bottom:0;
+  position: relative;
+}
+
+.compass-arrow {
+  width: 70px;
+  height: 200vh;
+  position: absolute;
+  left: 50%;
+  top: -50vh; 
+  background-color: rgba(98, 98, 224, 0.2);
+  background-image: linear-gradient(transparent 75%, rgba(255,255,255,.5) 75%);
+  background-size: 25px 25px;
+  transition: transform 1s ease;
+  margin-left: -35px;
+  box-shadow: inset 0 -20px black;  
+  animation: lines 30s infinite linear;
+  pointer-events: none;
+}
+
+@keyframes lines {
+  0% {
+    background-position:0 0%
+  }
+  100% {
+    background-position:0 50%
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .conditions {
+    padding: 1.5rem;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    border-radius: 0;
+  }
+  .conditions-opinion {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+}

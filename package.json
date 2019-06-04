@@ -1,16 +1,27 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
-  "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "should-i-kite-poole-bay",
+  "private": true,
+  "description": "Should I kite Poole Bay",
+  "version": "2.0.0",
+  "author": "Ollie Rogers",
   "dependencies": {
-    "axios": "^0.18.0",
-    "gatsby": "^1.9.247",
-    "gatsby-link": "^1.6.40",
-    "gatsby-plugin-google-analytics": "^2.0.6",
-    "gatsby-plugin-react-helmet": "^2.0.10",
+    "axios": "^0.19.0",
+    "gatsby": "^2.8.2",
+    "gatsby-image": "^2.1.2",
+    "gatsby-plugin-manifest": "^2.1.1",
+    "gatsby-plugin-offline": "^2.1.1",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-sharp": "^2.1.3",
+    "gatsby-source-filesystem": "^2.0.38",
+    "gatsby-transformer-sharp": "^2.1.21",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-google-maps": "^9.4.5",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.1"
+  },
+  "devDependencies": {
+    "prettier": "^1.17.1"
   },
   "keywords": [
     "gatsby"
@@ -19,10 +30,16 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
-  "devDependencies": {
-    "prettier": "^1.12.0"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
