@@ -7,7 +7,7 @@ import ContextProvider from "../context/contextProvider"
 const IndexPage = () => (
   <Layout>
     <ContextProvider>
-      <SEO title="Should I kite Poole bay" />
+      <SEO title="Should I kite Poole bay today" />
       <App />
     </ContextProvider>
   </Layout>
