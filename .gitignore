@@ -7,7 +7,7 @@ public
 # misc
 .DS_Store
 .cache
-.env
+.env.*
 npm-debug.log
 *.log
 package-lock.json

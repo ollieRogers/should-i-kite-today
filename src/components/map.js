@@ -32,7 +32,7 @@ const mapStyle = {
 
 const Map = () => (
   <WindCompass
-    googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyAYaYCWfLUeLYa6b_45D0X5vJHljwZmGYs`}
+    googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.GATSBY_GMAPS_API_KEY}`}
     loadingElement={<div style={mapStyle} />}
     containerElement={<div style={mapStyle} />}
     mapElement={<div style={mapStyle} />}

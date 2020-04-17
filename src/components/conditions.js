@@ -3,7 +3,6 @@ import { GlobalContext } from "../context/contextProvider"
 
 const Conditions = () => {
   const [weatherData] = useContext(GlobalContext)
-
   return (
     <div className="conditions">
       {!weatherData && <Fragment>Fetching weather...</Fragment>}
@@ -11,8 +10,7 @@ const Conditions = () => {
         <Fragment>
           <div className="conditions-opinion">{weatherData.opinion}</div>
           <div className="conditions-detail">
-            {weatherData.cardinal} {weatherData.avgSpeed} knots, gusting to{" "}
-            {weatherData.maxSpeed} knots
+            wind speed {weatherData.speed} m/s
           </div>
         </Fragment>
       )}
